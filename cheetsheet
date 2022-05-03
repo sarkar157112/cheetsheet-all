@@ -26,10 +26,12 @@ JAVA 11 installation in GCP machine
 download jdk-11.0.12_linux-x64_bin.tar.gz from https://www.oracle.com/java/technologies/downloads/#java11 and place it under /var/cache/oracle-jdk11-installer-local
 sudo apt-get install oracle-java11-installer-local
 sudo apt install oracle-java11-set-default-local
+
 git installation in ubuntu 16.04
 apt-get update
 apt-get install git
 git --version ( to verify git version )
+
 Jenkins installation in ubuntu 16.04
 wget https://updates.jenkins-ci.org/download/war/2.162/jenkins.war ( installs 2.162 version, if you want any other version to be installed visit https://updates.jenkins-ci.org/download/war/ download particular version )
 java -jar jenkins.war ( default runs on 8080 port )
@@ -42,6 +44,7 @@ apt-get update
 apt-get install jenkins
 systemctl start jenkins
 systemctl status jenkins
+
 maven installation in ubuntu 16.04
 cd /usr/local
 
@@ -66,6 +69,7 @@ mvn -version ( to verify maven version )
 For more details https://tecadmin.net/install-apache-maven-on-ubuntu/
 
 easy way to install - sudo apt install maven
+
 
 Docker installation in ubuntu 16.04
 sudo apt-get update
@@ -99,7 +103,9 @@ for more details refer https://docs.docker.com/install/linux/docker-ce/ubuntu/#i
     
     - even after following the above commands if you face any issue in ruuning commands then run below command
       chmod 777 /var/run/docker.sock
+
 SonarQube Installation in ubuntu 16.04
+
 Use apt-get to install the required packages.
 
 apt-get update
@@ -171,6 +177,8 @@ for more deatils refer - https://techexpert.tips/sonarqube/sonarqube-installatio
 
 you want to create sonarqube through docker then use below command
 docker run -d -p 9000:9000 sonarqube:lts
+
+
 JFROG Artifactory installation in ubuntu 16.04 using docker container
 export JFROG_HOME= /set/some/path
 
@@ -185,6 +193,7 @@ chown -R 1030:1030 $JFROG_HOME/artifactory/var
 run below docker command
 
 docker run --name artifactory -v $JFROG_HOME/artifactory/var/:/var/opt/jfrog/artifactory -d -p 8081:8081 -p 8082:8082 docker.bintray.io/jfrog/artifactory-oss:latest
+
 
 Ansible Installation in ubuntu 16.04
 sudo apt-add-repository ppa:ansible/ansible
@@ -228,7 +237,10 @@ Then to verify use below commands
 kubectl get nodes
 kubectl get pods
 Kubectl get service
+
+
 Nexus Installation in ubuntu 16.04
+
 apt-get install wget ( install if you dont have wget )
 java -version ( make sure java is installed which should be java 8 or higher version )
 wget https://download.sonatype.com/nexus/3/latest-unix.tar.gz
